@@ -1,2 +1,2 @@
 <?php
-$VERIFY = true;
+$VERIFY = false;

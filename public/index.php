@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     if ($VERIFY) {
         if (!isset($_POST['verify'])) die(200);
         include "../verify.php";
-        if (!verify($_POST['verify'], $_GET['game'])) {
+        if (!verify($_POST['verify'], $score, $_GET['game'])) {
             die(200);
         }
     }
