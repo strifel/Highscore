@@ -1,6 +1,6 @@
 <?php
-include "../config.php";
-include "../score.php";
+include "private/config.php";
+include "private/score.php";
 
 if (!isset($_GET['game'])) die(404);
 if (!gameExists($_GET['game'])) die(404);
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     // Do not tell people if lacking verification!
     if ($VERIFY) {
         if (!isset($_POST['verify'])) die(200);
-        include "../verify.php";
+        include "private/verify.php";
         if (!verify($_POST['verify'], $score, $_GET['game'])) {
             die(200);
         }

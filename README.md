@@ -9,8 +9,8 @@ You should know that as long the client provides the score/any information there
 This Tool I just wrote for small usage with friends, where I accept if somebody cheats.
 ## Installation
 1. Put this all on some server.
-2. Let some webserver point to the `public` directory
-3. Create the score directory
+2. Let some webserver point to the directory, but forbid access to `private`
+3. Create the `private/score` directory
 4. For each game create a `.score` file with the name of the game in the score directory and write a 0 (or any start value) into the file.
 5. Point your game clients to the installation
 6. Write custom validation in `verify.php` and enable in `config.php`
